@@ -1,0 +1,228 @@
+.hero {
+  min-height: 560px;
+  padding: 70px 8%;
+  background: linear-gradient(
+    135deg,
+    #f0fdf4 0%,
+    #ffffff 55%,
+    #ecfdf5 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #dcfce7;
+  color: #15803d;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  line-height: 1.08;
+  color: #111827;
+  margin-bottom: 22px;
+  letter-spacing: -1.5px;
+}
+
+.hero-content h1 span {
+  color: #22c55e;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #64748b;
+  line-height: 1.7;
+  max-width: 570px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 35px;
+}
+
+.hero-shop-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-shop-btn:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+.hero-secondary-btn {
+  background: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero-secondary-btn:hover {
+  border-color: #22c55e;
+  color: #16a34a;
+}
+
+.hero-features {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  color: #475569;
+  font-size: 14px;
+}
+
+.hero-features div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-features strong {
+  color: #22c55e;
+}
+
+
+/* RIGHT SIDE */
+
+.hero-visual {
+  width: 430px;
+  height: 430px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-circle {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #22c55e,
+    #15803d
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 25px 60px
+    rgba(34, 197, 94, 0.25);
+}
+
+.hero-circle span {
+  font-size: 130px;
+}
+
+.floating-card {
+  position: absolute;
+  background: white;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+
+  box-shadow: 0 10px 30px
+    rgba(0, 0, 0, 0.12);
+}
+
+.card-one {
+  left: 0;
+  top: 80px;
+}
+
+.card-two {
+  right: 0;
+  bottom: 75px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 30px;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons,
+  .hero-features {
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 45px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: 330px;
+  }
+
+  .hero-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-circle span {
+    font-size: 90px;
+  }
+
+  .floating-card {
+    font-size: 12px;
+  }
+}
