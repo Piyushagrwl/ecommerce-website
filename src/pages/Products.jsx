@@ -172,7 +172,7 @@ if (searchText) {
 
                 {product.image ? (
                   <img
-                  src={`http://localhost:5001${product.image}`}
+                  src={`https://shopease-backend-53gd.onrender.com${product.image}`}
                   alt={product.name}
                 />
                 ) : (

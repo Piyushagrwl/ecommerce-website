@@ -334,7 +334,7 @@ function Admin() {
 
   {form.image && (
     <img
-      src={`http://localhost:5001${form.image}`}
+      src={`https://shopease-backend-53gd.onrender.com${form.image}`}
       alt="Preview"
       width="120"
       style={{
