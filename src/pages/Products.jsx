@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import API from "../services/api";
 import "../styles/ShopPages.css";
+import getImageUrl from "../utils/imageUrl";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -172,13 +173,9 @@ if (searchText) {
 
               {product.image ? (
   <img
-    src={
-      product.image.startsWith("http")
-        ? product.image
-        : `https://shopease-backend-53gd.onrender.com${product.image.startsWith("/") ? product.image : `/uploads/${product.image}`}`
-    }
-    alt={product.name}
-  />
+  src={getImageUrl(product.image)}
+  alt={product.name}
+/>
 ) : (
   <span>📦</span>
 )}

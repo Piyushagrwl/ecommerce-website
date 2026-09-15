@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
 import "../styles/ShopPages.css";
+import getImageUrl from "../utils/imageUrl";
 
 function Wishlist() {
   const [wishlist, setWishlist] = useState([]);
@@ -52,9 +53,9 @@ function Wishlist() {
               <div className="shop-product-image">
                 {product.image ? (
                   <img
-                  src={`https://shopease-backend-53gd.onrender.com${product.image}`}
-                    alt={product.name}
-                  />
+                  src={getImageUrl(product.image)}
+                  alt={product.name}
+                />
                 ) : (
                   <span>📦</span>
                 )}

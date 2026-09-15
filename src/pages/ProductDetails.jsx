@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import API from "../services/api";
 import "../styles/ShopPages.css";
+import getImageUrl from "../utils/imageUrl";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -54,10 +55,10 @@ function ProductDetails() {
         {/* PRODUCT IMAGE */}
         <div className="details-image">
           {product.image ? (
-            <img
-            src={`https://shopease-backend-53gd.onrender.com${product.image}`}
-              alt={product.name}
-            />
+           <img
+           src={getImageUrl(product.image)}
+           alt={product.name}
+         />
           ) : (
             <span>📦</span>
           )}

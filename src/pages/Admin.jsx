@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
 import "../styles/Admin.css";
-
+import getImageUrl from "../utils/imageUrl";
 function Admin() {
   const [products, setProducts] = useState([]);
   const [message, setMessage] = useState("");
@@ -344,17 +344,17 @@ function Admin() {
     onChange={uploadImage}
   />
 
-  {form.image && (
-    <img
-      src={`https://shopease-backend-53gd.onrender.com${form.image}`}
-      alt="Preview"
-      width="120"
-      style={{
-        marginTop: "10px",
-        borderRadius: "8px",
-      }}
-    />
-  )}
+{form.image && (
+  <img
+    src={getImageUrl(form.image)}
+    alt="Preview"
+    width="120"
+    style={{
+      marginTop: "10px",
+      borderRadius: "8px",
+    }}
+  />
+)}
 </div>
 
           <button
