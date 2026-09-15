@@ -170,14 +170,18 @@ if (searchText) {
 
               <div className="shop-product-image">
 
-                {product.image ? (
-                  <img
-                  src={`https://shopease-backend-53gd.onrender.com${product.image}`}
-                  alt={product.name}
-                />
-                ) : (
-                  <span>📦</span>
-                )}
+              {product.image ? (
+  <img
+    src={
+      product.image.startsWith("http")
+        ? product.image
+        : `https://shopease-backend-53gd.onrender.com${product.image.startsWith("/") ? product.image : `/uploads/${product.image}`}`
+    }
+    alt={product.name}
+  />
+) : (
+  <span>📦</span>
+)}
 
               </div>
 
