@@ -297,6 +297,18 @@ function Admin() {
               required
             />
           </div>
+          <div className="form-group">
+  <label>Description</label>
+
+  <input
+    type="text"
+    name="description"
+    value={form.description}
+    onChange={handleChange}
+    placeholder="Enter product description"
+    required
+  />
+</div>
 
           <div className="form-group">
             <label>Stock</label>
